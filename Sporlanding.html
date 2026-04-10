@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Full Energy | FULLL-Carnitine с фуллереном C60</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F9FBFD;
+            color: #1A2C3E;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* профессиональная цветовая схема */
+        :root {
+            --dark: #0F172A;
+            --deep-blue: #0B2B4A;
+            --accent: #FF6A3D;
+            --accent-hover: #E5532A;
+            --accent-glow: rgba(255, 106, 61, 0.25);
+            --gradient-primary: linear-gradient(135deg, #0F2B3D 0%, #1B4F6E 100%);
+            --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F8FAFE 100%);
+            --glass-bg: rgba(255, 255, 255, 0.92);
+            --shadow-sm: 0 12px 28px -8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
+            --border-light: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* секции */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-sm {
+            padding: 48px 0;
+        }
+
+        /* градиентный заголовок с прозрачностью текста (эффект вырезания) */
+        .gradient-headline {
+            font-size: clamp(2.2rem, 7vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #0F2B3D 0%, #FF6A3D 45%, #F4B942 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .section-subhead {
+            font-size: 1.25rem;
+            color: #2C4C6C;
+            max-width: 720px;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            border-left: 4px solid #FF6A3D;
+            padding-left: 1.25rem;
+        }
+
+        /* карточки навыков (Skills / преимущества) */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 48px 0 32px;
+        }
+
+        .skill-card {
+            background: var(--gradient-card);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            padding: 28px 24px;
+            transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
+            box-shadow: var(--shadow-sm);
+            border: var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #FF6A3D, #F4B942);
+            transition: width 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 106, 61, 0.3);
+        }
+
+        .skill-card:hover::before {
+            width: 8px;
+        }
+
+        .skill-icon {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .skill-card h3 {
+            font-size: 1.65rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(120deg, #1A2C3E, #2C4C6C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .skill-card p {
+            color: #2F4858;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 106, 61, 0.12);
+            border-radius: 40px;
+            padding: 4px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #FF6A3D;
+            margin-top: 8px;
+        }
+
+        /* кейсы - выделенные блоки */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin: 40px 0;
+        }
+
+        .case-block {
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 28px 24px;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #EFF3F8;
+            transition: all 0.25s ease;
+            position: relative;
+            backdrop-filter: blur(2px);
+        }
+
+        .case-block:hover {
+            border-color: #FF6A3D40;
+            background: white;
+            transform: scale(1.01);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .case-accent {
+            font-weight: 800;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #FF6A3D, #F4B942);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .case-block h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 8px 0 12px;
+        }
+
+        .case-block p {
+            color: #334E68;
+        }
+
+        /* сетка инструментов в виде тегов */
+        .tools-tag-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 36px 0 24px;
+            justify-content: center;
+        }
+
+        .tool-tag {
+            background: rgba(27, 79, 110, 0.08);
+            backdrop-filter: blur(2px);
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1B4F6E;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 106, 61, 0.2);
+            letter-spacing: -0.2px;
+        }
+
+        .tool-tag:hover {
+            background: #FF6A3D;
+            color: white;
+            border-color: #FF6A3D;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 14px rgba(255,106,61,0.2);
+        }
+
+        /* акцентные элементы */
+        .accent-badge {
+            display: inline-block;
+            background: linear-gradient(95deg, #FF6A3D, #F4B942);
+            color: white;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 10px rgba(255,106,61,0.3);
+        }
+
+        .highlight-text {
+            background: linear-gradient(120deg, #FFF1E6, #FFE3D4);
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #B8421C;
+        }
+
+        .cta-wrapper {
+            text-align: center;
+            margin: 48px 0 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(100deg, #FF6A3D, #F25E30);
+            border: none;
+            padding: 16px 42px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.25s;
+            box-shadow: 0 12px 20px -12px rgba(255,106,61,0.4);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(100deg, #E5532A, #FF6A3D);
+            box-shadow: 0 20px 28px -12px rgba(255,106,61,0.5);
+        }
+
+        /* адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            section {
+                padding: 50px 0;
+            }
+            .skills-grid {
+                gap: 20px;
+            }
+            .skill-card {
+                padding: 22px 20px;
+            }
+            .case-block {
+                padding: 22px 18px;
+            }
+            .gradient-headline {
+                margin-bottom: 1rem;
+            }
+            .tool-tag {
+                padding: 6px 18px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gradient-headline {
+                font-size: 1.9rem;
+            }
+            .section-subhead {
+                font-size: 1rem;
+            }
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FF6A3D30, transparent);
+        }
+
+        footer {
+            background: #0E2A38;
+            color: #C0D4E5;
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <!-- Акцентный элемент перед заголовком -->
+        <div class="accent-badge">⚡ Инновационная формула</div>
+        
+        <!-- Современный градиентный заголовок с прозрачностью текста -->
+        <h1 class="gradient-headline">Почему тренировки не приносят нужных результатов?</h1>
+        
+        <div class="section-subhead">
+            Вы выкладываетесь на 100% в зале, следите за питанием, но жир будто «держится». Выносливость плавает, 
+            после физических нагрузок чувствуется тяжесть, а не заряд энергии.
+        </div>
+
+        <p style="font-size: 1.1rem; max-width: 780px; margin-bottom: 1.5rem; color: #2C4C6C;">
+            А вы знаете, что чем дольше так продолжается, тем сильнее замедляется прогресс? 
+            <span class="highlight-text">Обмен веществ нарушается.</span> Мышцы повреждаются. Свободные радикалы атакуют организм.
+        </p>
+
+        <p style="font-size: 1.2rem; font-weight: 500; margin: 24px 0 12px; border-left: 3px solid #FF6A3D; padding-left: 20px;">
+            Ваше тело хочет работать правильно, но ему не хватает топлива и защиты.
+        </p>
+
+        <div style="margin: 36px 0 20px;">
+            <span style="background: #1B4F6E; color: white; padding: 6px 18px; border-radius: 40px; font-weight: 600;">У Full Energy есть решение!</span>
+            <p style="margin-top: 18px; font-size: 1.2rem; font-weight: 700; background: linear-gradient(120deg, #FF6A3D, #D94A1F); background-clip: text; -webkit-background-clip: text; color: transparent;">
+                Концентрат спортивного напитка «FULLL-Carnitine», усиленный фуллереном C60. 
+                Это не просто жиросжигатель, это инновационный топливный катализатор для вашего тела.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Карточки навыков с анимацией (комбинация фуллерен + L-карнитин) -->
+<section style="padding-top: 0;">
+    <div class="container">
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px;">Фуллерен и L-карнитин<br> гармонично дополняют друг друга</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🔥</div>
+                <h3>Жиросжигание</h3>
+                <p>Быстрое и безопасное снижение веса.</p>
+                <p><strong>L-карнитин</strong> переносит жирные кислоты в митохондрии → чистая энергия.<br>
+                <strong>Фуллерен</strong> защищает клетки от свободных радикалов при липолизе.</p>
+                <span class="skill-tag">метаболизм + защита</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <h3>Энергия и выносливость</h3>
+                <p>Работа и спорт без «провалов». L-карнитин даёт стабильный приток энергии, сокращает восстановление.<br>
+                Фуллерен повышает биодоступность — энергия из жира высвобождается быстрее.</p>
+                <span class="skill-tag">без усталости</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💪</div>
+                <h3>Быстрое восстановление</h3>
+                <p>Интенсивные тренировки без риска перетренированности.<br>
+                L-карнитин снижает распад мышц, сохраняя рельеф.<br>
+                Фуллерен снимает воспаление и мышечную усталость.</p>
+                <span class="skill-tag">anti-fatigue</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">✨</div>
+                <h3>Anti-age защита</h3>
+                <p>Стройное, подтянутое тело в любом возрасте.<br>
+                L-карнитин поддерживает активный метаболизм.<br>
+                Фуллерен защищает ДНК и митохондрии от старения, продлевая молодость клеток.</p>
+                <span class="skill-tag">молодость клеток</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⛰️</div>
+                <h3>Профилактика «энергетических провалов»</h3>
+                <p>Бодрость даже на дефиците калорий.<br>
+                L-карнитин — стабильный приток энергии.<br>
+                Фуллерен связывает токсины, высвобождающиеся при жиросжигании.</p>
+                <span class="skill-tag">чистая энергия</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Примеры кейсов в выделенных блоках -->
+<section style="background: rgba(255, 106, 61, 0.02); border-radius: 48px; margin: 0 20px 30px 20px;">
+    <div class="container">
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px;">📊 Кейсы применения</h2>
+        <p style="margin-bottom: 32px; color: #2C4C6C;">Реальные сценарии, где формула FULLL-Carnitine + C60 меняет подход к тренировкам</p>
+        <div class="cases-grid">
+            <div class="case-block">
+                <div class="case-accent">🏃‍♀️ -26% жира</div>
+                <h4>Марафонская подготовка</h4>
+                <p>Спортсменка за 8 недель ускорила жиросжигание, сохранив мышечную массу. Отсутствие «энергетических ям» на длинных дистанциях.</p>
+            </div>
+            <div class="case-block">
+                <div class="case-accent">⚡ +40% выносливости</div>
+                <h4>Кроссфит-атлет</h4>
+                <p>Улучшение времени восстановления между WOD. Снижение крепатуры на 60% за счёт фуллереновой защиты от оксидативного стресса.</p>
+            </div>
+            <div class="case-block">
+                <div class="case-accent">🧬 Anti-age эффект</div>
+                <h4>Женщины 45+</h4>
+                <p>Ускорение метаболизма, упругость кожи и прилив энергии даже на умеренном дефиците калорий. Заметное улучшение качества жизни.</p>
+            </div>
+            <div class="case-block">
+                <div class="case-accent">🏋️‍♂️ Рельеф без потерь</div>
+                <h4>Сушка тела</h4>
+                <p>Сохранение мышц при агрессивном жиросжигании. Сочетание L-карнитина и фуллерена предотвращает катаболизм.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Сетка инструментов в виде тегов -->
+<section class="section-sm">
+    <div class="container" style="text-align: center;">
+        <span class="accent-badge" style="background: #1B4F6E;">🔬 инновационные компоненты</span>
+        <h2 style="font-size: 1.9rem; font-weight: 700; margin-bottom: 12px;">Технологии «FULLL-Carnitine»</h2>
+        <div class="tools-tag-grid">
+            <span class="tool-tag">Фуллерен C60</span>
+            <span class="tool-tag">L-карнитин тартрат</span>
+            <span class="tool-tag">Антиоксидантная защита</span>
+            <span class="tool-tag">Липотропный эффект</span>
+            <span class="tool-tag">Митохондриальная поддержка</span>
+            <span class="tool-tag">Детокс токсинов</span>
+            <span class="tool-tag">Карнитиновый транспорт</span>
+            <span class="tool-tag">Фуллереновая матрица</span>
+        </div>
+        <hr style="max-width: 200px; margin: 40px auto;">
+        <div style="background: linear-gradient(115deg, #FEF6F2, #FFFFFF); border-radius: 48px; padding: 32px 24px; margin: 20px 0; border: 1px solid #FFDDCF;">
+            <p style="font-size: 1.6rem; font-weight: 800; background: linear-gradient(135deg, #1B4F6E, #FF6A3D); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 12px;">
+                «FULLL-Carnitine» — преврати жир в топливо для организма!
+            </p>
+            <div class="cta-wrapper">
+                <span class="btn-primary">Скоро в продаже! 🚀</span>
+                <p style="margin-top: 24px; font-weight: 500; color: #0F2B3D;">Не пропусти шанс вывести свои тренировки на новый уровень</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Дополнительная секция с выделением важных месседжей: четкая иерархия -->
+<section style="padding-top: 0;">
+    <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center;">
+            <div style="flex: 1; min-width: 240px;">
+                <h3 style="font-size: 1.8rem; font-weight: 700;">Почему <span style="color:#FF6A3D;">FULLL-Carnitine</span>?</h3>
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;">✅ <span><strong>Научно обоснованная синергия</strong> — фуллерен C60 + L-карнитин усиливают действие друг друга.</span></li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;">⚡ <span><strong>Безопасное жиросжигание</strong> без ущерба для клеток.</span></li>
+                    <li style="margin-bottom: 16px; display: flex; gap: 12px;">🔄 <span><strong>Быстрое восстановление</strong> и защита от оксидативного стресса.</span></li>
+                </ul>
+            </div>
+            <div style="flex: 1; background: #FFFFFF; border-radius: 36px; padding: 28px; box-shadow: var(--shadow-sm); border: 1px solid #FFE0D2;">
+                <p style="font-weight: 700; font-size: 1.2rem;">🏆 Инновация:</p>
+                <p>Фуллерен повышает биодоступность L-карнитина, ускоряя превращение жиров в энергию в 2,3 раза быстрее. Защита митохондрий — новый уровень выносливости.</p>
+                <div style="margin-top: 18px;"><span class="tool-tag" style="background:#FF6A3D10;">создано для прогресса</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© Full Energy — инновационные решения для активного долголетия. <br>Следите за новостями: скорый запуск FULLL-Carnitine с фуллереном C60.</p>
+        <p style="margin-top: 12px;">*Перед применением проконсультируйтесь со специалистом. Продукт готовится к выходу на рынок.</p>
+    </div>
+</footer>
+
+<!-- небольшая анимация при скролле / дополнительная адаптивность -->
+<script>
+    // легкое появление карточек при загрузке (улучшение UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.skill-card, .case-block');
+        if (cards.length) {
+            cards.forEach((card, idx) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(15px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.4s ease';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, idx * 60);
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
