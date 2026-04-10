@@ -1,0 +1,220 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Попова Галина | AI-Консультант в финансах</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+
+        /* 1. Градиентный заголовок с прозрачностью текста */
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* 2. Анимация карточек */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Стеклянный эффект */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.2s;
+        }
+        .tag:hover {
+            background: rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="py-16 px-6 max-w-6xl mx-auto text-center">
+        <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4 text-sm">Коммерческое предложение</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 gradient-text">
+            ПОПОВА ГАЛИНА ВЛАДИМИРОВНА
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Внедрение нейросетей в финансовые процессы и управленческую отчетность
+        </p>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 mb-20">
+        <div class="glass p-8 rounded-3xl grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="w-8 h-8 bg-blue-500 rounded-lg mr-3 flex items-center justify-center text-sm">👤</span>
+                    Позиционирование
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    AI-консультант в области финансов, инвестиционного анализа и бизнес-процессов. Работаю на стыке финансовой экспертизы и нейросетей.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-400 mr-2">✔</span> Финансы и управленческая отчетность
+                    </div>
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-400 mr-2">✔</span> Инвестиционный анализ
+                    </div>
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-400 mr-2">✔</span> Оптимизация операционных процессов
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20">
+                <h3 class="text-xl font-bold mb-4 text-white">🎯 Ниша</h3>
+                <p class="text-slate-400 mb-4 italic">Я не «AI-специалист общего профиля». Моя зона — это:</p>
+                <ul class="grid grid-cols-1 gap-3">
+                    <li class="bg-slate-800/50 p-3 rounded-lg border border-slate-700 italic">Финансовые отделы</li>
+                    <li class="bg-slate-800/50 p-3 rounded-lg border border-slate-700 italic">Инвестиционные проекты</li>
+                    <li class="bg-slate-800/50 p-3 rounded-lg border border-slate-700 italic">Компании с высокой долей ручной аналитики</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-center">💼 Кейсы (с цифрами)</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass p-6 rounded-2xl card-hover">
+                <div class="text-blue-400 font-bold mb-2">01. Отчетность</div>
+                <h4 class="text-lg font-semibold mb-4">Автоматизация ОСВ</h4>
+                <p class="text-sm text-slate-400 mb-4">Настроена логика обработки через AI и шаблоны сопоставления счетов.</p>
+                <div class="bg-blue-500/10 p-3 rounded-lg">
+                    <p class="text-blue-300 text-sm font-semibold">⏱ Время: -40–60%</p>
+                    <p class="text-blue-300 text-sm font-semibold">❌ Ошибки: исключены</p>
+                </div>
+            </div>
+            <div class="glass p-6 rounded-2xl card-hover">
+                <div class="text-purple-400 font-bold mb-2">02. Инвестиции</div>
+                <h4 class="text-lg font-semibold mb-4">Анализ RCPS</h4>
+                <p class="text-sm text-slate-400 mb-4">AI-анализ договоров, выделение рисков и подготовка вопросов инвестору.</p>
+                <div class="bg-purple-500/10 p-3 rounded-lg">
+                    <p class="text-purple-300 text-sm font-semibold">⏱ Ускорение: в 2–3 раза</p>
+                    <p class="text-purple-300 text-sm font-semibold">📊 Качество: выше</p>
+                </div>
+            </div>
+            <div class="glass p-6 rounded-2xl card-hover">
+                <div class="text-pink-400 font-bold mb-2">03. Коммуникации</div>
+                <h4 class="text-lg font-semibold mb-4">Деловая переписка</h4>
+                <p class="text-sm text-slate-400 mb-4">Адаптация стиля под инвесторов (formal / persuasive) через AI.</p>
+                <div class="bg-pink-500/10 p-3 rounded-lg">
+                    <p class="text-pink-300 text-sm font-semibold">⚡ Скорость: в 3–5 раз</p>
+                    <p class="text-pink-300 text-sm font-semibold">📈 Аргументация: +++</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 mb-20 grid md:grid-cols-2 gap-10">
+        <div>
+            <h3 class="text-2xl font-bold mb-6 flex items-center">⚙️ Инструменты</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">ChatGPT</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">Gemini</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">Claude</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">DeepSeek</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">Grok</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium">Microsoft Copilot</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium border-white/10 text-slate-400">Excel</span>
+                <span class="tag px-4 py-2 rounded-full text-sm font-medium border-white/10 text-slate-400">1С</span>
+            </div>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold mb-6">🚀 Услуги</h3>
+            <ul class="grid grid-cols-1 gap-2 text-slate-300">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span> Аудит и поиск автоматизации</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span> Автоматизация отчетности</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span> Анализ договоров и инвестиций</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span> Prompt engineering</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></span> Обучение сотрудников</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-center">💰 Формат работы и пакеты</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass p-6 rounded-2xl border-t-4 border-blue-500">
+                <h4 class="font-bold mb-2">Диагностика</h4>
+                <p class="text-xs text-slate-400 mb-4">Быстрый старт</p>
+                <div class="text-2xl font-bold mb-4">€150 – €300</div>
+                <ul class="text-xs space-y-2 text-slate-400">
+                    <li>• 1-2 встречи</li>
+                    <li>• Точки автоматизации</li>
+                    <li>• План внедрения</li>
+                </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl border-t-4 border-purple-500">
+                <h4 class="font-bold mb-2">Мини-проект</h4>
+                <p class="text-xs text-slate-400 mb-4">1-2 недели</p>
+                <div class="text-2xl font-bold mb-4">€500 – €1.5k</div>
+                <ul class="text-xs space-y-2 text-slate-400">
+                    <li>• 1-2 процесса</li>
+                    <li>• Настройка AI-логики</li>
+                    <li>• Инструкции</li>
+                </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl border-t-4 border-pink-500 shadow-xl shadow-pink-500/10">
+                <h4 class="font-bold mb-2">Полное внедрение</h4>
+                <p class="text-xs text-slate-400 mb-4">3-6 недель</p>
+                <div class="text-2xl font-bold mb-4">€2k – €5k</div>
+                <ul class="text-xs space-y-2 text-slate-400">
+                    <li>• Полный аудит</li>
+                    <li>• Сквозная автоматизация</li>
+                    <li>• Обучение команды</li>
+                </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl border-t-4 border-slate-500">
+                <h4 class="font-bold mb-2">Сопровождение</h4>
+                <p class="text-xs text-slate-400 mb-4">Retainer</p>
+                <div class="text-xl font-bold mb-4">€300 – €1k /мес</div>
+                <ul class="text-xs space-y-2 text-slate-400">
+                    <li>• Доработка сценариев</li>
+                    <li>• Новые кейсы</li>
+                    <li>• Поддержка 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-4xl mx-auto px-6 pb-24 text-center">
+        <div class="glass p-12 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900">
+            <h2 class="text-3xl font-bold mb-6 italic">Готовы масштабировать эффективность?</h2>
+            <p class="text-slate-300 mb-10 text-lg">
+                Могу провести короткую диагностику и показать, где именно у вас можно получить быстрый эффект от внедрения AI.
+            </p>
+            <button class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25">
+                Записаться на диагностику
+            </button>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-slate-500 uppercase tracking-widest">
+                <span>Проверенные решения</span>
+                <span>Контроль качества</span>
+                <span>Фокус на ROI</span>
+                <span>Быстрое внедрение</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
